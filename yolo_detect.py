@@ -4,19 +4,8 @@ from collections import defaultdict
 
 # Load the YOLO model
 model = YOLO('yolo11l.pt')
-class_list = model.names 
 #class_list
-# Open the video file
-cap = cv2.VideoCapture('test_videos/4.mp4')
-import cv2
-from ultralytics import YOLO
-from collections import defaultdict
-
-# Load the YOLO model
-model = YOLO('yolo11l.pt')
-
 class_list = model.names 
-#class_list
 
 # Open the video file
 cap = cv2.VideoCapture('4.mp4')
@@ -35,7 +24,7 @@ while cap.isOpened():
         break
 
     # Run YOLO tracking on the frame
-    results = model.track(frame, persist=True, classes = [1,2,3,5,6,7]) 
+    results = model.track(frame, persist=True, classes = [2,3,4,6,7,8]) 
     #print(results)
 
     # Ensure results are not empty
@@ -63,7 +52,7 @@ while cap.isOpened():
             # Uncomment the line below to restore the points on the detected objects.
             #cv2.circle(frame, (cx, cy), 4, (0, 0, 255), -1)
 
-            cv2.putText(frame, f"ID: {track_id} {class_name}", (x1, y1 - 10),
+            cv2.putText(frame, f"{class_name}", (x1, y1 - 10),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 255), 2)
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2) 
 
