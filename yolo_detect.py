@@ -5,12 +5,9 @@ from collections import defaultdict
 # Load the YOLO model
 model = YOLO('yolo11l.pt')
 class_list = model.names 
-#class_list
+
 # Open the video file
-cap = cv2.VideoCapture('test_videos/4.mp4')
-import cv2
-from ultralytics import YOLO
-from collections import defaultdict
+cap = cv2.VideoCapture('test_videos/testing_video.mp4')
 
 # Load the YOLO model
 model = YOLO('yolo11l.pt')
@@ -18,8 +15,6 @@ model = YOLO('yolo11l.pt')
 class_list = model.names 
 #class_list
 
-# Open the video file
-cap = cv2.VideoCapture('4.mp4')
 
 line_y_red = 430  # Red line position
 
@@ -49,9 +44,6 @@ while cap.isOpened():
         cv2.line(frame, (690, line_y_red), (1130, line_y_red), (0, 0, 255), 3)
         #cv2.putText(frame, 'Red Line', (690, line_y_red - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
 
-
-        
-
         # Loop through each detected object
         for box, track_id, class_idx, conf in zip(boxes, track_ids, class_indices, confidences):
             x1, y1, x2, y2 = map(int, box)
@@ -75,12 +67,16 @@ while cap.isOpened():
                 class_counts[class_name] += 1
 
 
-        # Display the counts on the frame
-        y_offset = 30
+        # Display the counts on the frame 
+        y_offset = 120
+        text_color = (15, 10, 20)
+        thickness = 3 
+        fontscale = 1
+        font = cv2.FONT_HERSHEY_TRIPLEX
         for class_name, count in class_counts.items():
-            cv2.putText(frame, f"{class_name}: {count}", (50, y_offset),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
-            y_offset += 30
+            cv2.putText(frame, f"{class_name}: {count}", (1600, y_offset),
+                        font, fontscale, text_color, thickness)
+            y_offset += 40
 
     
     
@@ -94,3 +90,4 @@ while cap.isOpened():
 # Release resources
 cap.release()
 cv2.destroyAllWindows()
+
