@@ -4,7 +4,7 @@ from collections import defaultdict
 
 # Load the YOLO model
 model = YOLO('yolo11l.pt')
-<<<<<<< HEAD
+
 class_list = model.names 
 
 # Open the video file
@@ -13,13 +13,12 @@ cap = cv2.VideoCapture('test_videos/testing_video.mp4')
 # Load the YOLO model
 model = YOLO('yolo11l.pt')
 
-=======
+
 #class_list
->>>>>>> 02bb01598929a73ad01037128ee608f0b6b95e05
 class_list = model.names 
 
 
-line_y_red = 430  # Red line position
+line_y_red = 630  # Red line position
 
 # Dictionary to store object counts by class
 class_counts = defaultdict(int)
@@ -44,7 +43,7 @@ while cap.isOpened():
         class_indices = results[0].boxes.cls.int().cpu().tolist()
         confidences = results[0].boxes.conf.cpu()
 
-        cv2.line(frame, (690, line_y_red), (1130, line_y_red), (0, 0, 255), 3)
+        cv2.line(frame, (300, line_y_red), (880, line_y_red-30), (0, 0, 255), 3)
         #cv2.putText(frame, 'Red Line', (690, line_y_red - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
 
         # Loop through each detected object
