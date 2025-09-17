@@ -8,17 +8,12 @@ model = YOLO('yolo11l.pt')
 class_list = model.names 
 
 # Open the video file
-cap = cv2.VideoCapture('test_videos/testing_video.mp4')
-
-# Load the YOLO model
-model = YOLO('yolo11l.pt')
-
+cap = cv2.VideoCapture('test_videos/video2test1.mp4')
 
 #class_list
 class_list = model.names 
 
-
-line_y_red = 630  # Red line position
+line_y_red = 430 # Red line position
 
 # Dictionary to store object counts by class
 class_counts = defaultdict(int)
@@ -32,7 +27,7 @@ while cap.isOpened():
         break
 
     # Run YOLO tracking on the frame
-    results = model.track(frame, persist=True, classes = [2,3,4,6,7,8]) 
+    results = model.track(frame, persist=True, classes = [2,3,4,6,7,8], conf = 0.7) 
     #print(results)
 
     # Ensure results are not empty
@@ -43,7 +38,7 @@ while cap.isOpened():
         class_indices = results[0].boxes.cls.int().cpu().tolist()
         confidences = results[0].boxes.conf.cpu()
 
-        cv2.line(frame, (300, line_y_red), (880, line_y_red-30), (0, 0, 255), 3)
+        cv2.line(frame, (400, line_y_red), (1200, line_y_red), (0, 0, 255), 3)
         #cv2.putText(frame, 'Red Line', (690, line_y_red - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
 
         # Loop through each detected object
@@ -71,12 +66,12 @@ while cap.isOpened():
 
         # Display the counts on the frame 
         y_offset = 120
-        text_color = (15, 10, 20)
-        thickness = 3 
+        text_color = (127, 0, 255)
+        thickness = 2 
         fontscale = 1
         font = cv2.FONT_HERSHEY_TRIPLEX
         for class_name, count in class_counts.items():
-            cv2.putText(frame, f"{class_name}: {count}", (1600, y_offset),
+            cv2.putText(frame, f"{class_name}: {count}", (1000, y_offset),
                         font, fontscale, text_color, thickness)
             y_offset += 40
 
@@ -92,4 +87,3 @@ while cap.isOpened():
 # Release resources
 cap.release()
 cv2.destroyAllWindows()
-
