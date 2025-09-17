@@ -2,7 +2,6 @@
 Ce projet utilise **YOLOV11** pour détecter,compter,catégoriser et suivre les véhicules en temps réel ou sur des vidéos enregistrées.  
 
 ---
----
 
 ## 🤝 Contributeurs
 
