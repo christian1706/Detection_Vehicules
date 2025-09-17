@@ -22,7 +22,7 @@ Ce projet utilise **YOLOV11** pour détecter,compter,catégoriser et suivre les 
 
 ## 📸 Démo  
 
-👉 *Ajoute ici un GIF ou une capture vidéo montrant ton système en action*  
+👉 *![Démo du projet](https://github.com/christian1706/Detection_Vehicules/blob/develop/Test_Videos/VideolLinkedin.gif)*  
 
 ---
 
