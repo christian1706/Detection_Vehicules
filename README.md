@@ -2,6 +2,15 @@
 Ce projet utilise **YOLOV11** pour détecter,compter,catégoriser et suivre les véhicules en temps réel ou sur des vidéos enregistrées.  
 
 ---
+---
+
+## 🤝 Contributeurs
+
+👩‍💻 STEVE DONFACK (https://www.linkedin.com/in/steve-don/)
+
+👨‍💻 TAMDJO CHRISTIAN (https://www.linkedin.com/in/christian-dior-tamdjo/)
+
+---
 
 ## ✨ Fonctionnalités  
 
@@ -18,14 +27,19 @@ Ce projet utilise **YOLOV11** pour détecter,compter,catégoriser et suivre les 
 
 ---
 
-## 🛠️ Installation  
+## 🛠️ Installation et Lancement 
 
-### 1. Cloner le dépôt  
 ```bash
-git clone https://github.com/christian1706/Detection_Vehicules.git
+  conda create env
 ```
 ```bash
-pip install ultralytics
+  conda activate env
+```
+```bash
+pip install ultralytics opencv-python
+```
+```bash
+git clone https://github.com/christian1706/Detection_Vehicules.git
 ```
 ```bash
 cd Detection_Vehicules/
@@ -37,8 +51,4 @@ python yolo_detect.py
 👉 [Télécharger anaconda ici](https://www.anaconda.com/download) (Windows, macOS, Linux). 
 
 
-## 🤝 Contributeurs
 
-👩‍💻 STEVE DONFACK (https://www.linkedin.com/in/steve-don/)
-
-👨‍💻 TAMDJO CHRISTIAN (https://www.linkedin.com/in/christian-dior-tamdjo/)
