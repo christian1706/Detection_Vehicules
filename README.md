@@ -48,7 +48,16 @@ cd Detection_Vehicules/
 python yolo_detect.py
 ```
 
-👉 [Télécharger anaconda ici](https://www.anaconda.com/download) (Windows, macOS, Linux). 
+---
+
+## 🔗 Sources & Références  
+
+- **YOLO (Ultralytics)** : [https://ultralytics.com](https://ultralytics.com)  
+- **Documentation YOLOv11** : [https://docs.ultralytics.com](https://docs.ultralytics.com)  
+- **PyTorch** : [https://pytorch.org](https://pytorch.org)  
+- **Anaconda** : [https://www.anaconda.com/download](https://www.anaconda.com/download)  
+- **OpenCV** : [https://opencv.org](https://opencv.org)  
+
 
 
 
