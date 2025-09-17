@@ -34,10 +34,11 @@ cd Detection_Vehicules/
 python yolo_detect.py
 ```
 
-👉 [Télécharger ici](https://www.anaconda.com/download) (Windows, macOS, Linux). 
+👉 [Télécharger anaconda ici](https://www.anaconda.com/download) (Windows, macOS, Linux). 
 
 
 ## 🤝 Contributeurs
 
-👩‍💻 STEVE DONFACK
-👨‍💻 TAMDJO CHRISTIAN
+👩‍💻 STEVE DONFACK (https://www.linkedin.com/in/steve-don/)
+
+👨‍💻 TAMDJO CHRISTIAN (https://www.linkedin.com/in/christian-dior-tamdjo/)
