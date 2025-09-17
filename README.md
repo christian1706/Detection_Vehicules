@@ -23,12 +23,17 @@ Ce projet utilise **YOLOV11** pour détecter,compter,catégoriser et suivre les 
 ### 1. Cloner le dépôt  
 ```bash
 git clone https://github.com/christian1706/Detection_Vehicules.git
+```
+```bash
+pip install ultralytics
+```
 ```bash
 cd Detection_Vehicules/
 ```
 ```bash
 python yolo_detect.py
 ```
+
 👉 [Télécharger ici](https://www.anaconda.com/download) (Windows, macOS, Linux). 
 
 
