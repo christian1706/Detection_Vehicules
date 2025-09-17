@@ -22,14 +22,14 @@ Ce projet utilise **YOLOV11** pour détecter,compter,catégoriser et suivre les 
 
 ### 1. Cloner le dépôt  
 ```bash
-git clone https://github.com/ton-username/vehicle-detection.git
-cd vehicle-detection
+git clone https://github.com/christian1706/Detection_Vehicules.git
+```bash
+cd Detection_Vehicules/
 
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
+```bash
+python yolo_detect.py
 
-pip install -r requirements.txt
+👉 [Télécharger ici](https://www.anaconda.com/download) (Windows, macOS, Linux). 
 
 
 ## 🤝 Contributeurs
