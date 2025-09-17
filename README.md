@@ -1,7 +1,5 @@
 # 🚗 Vehicle Detection & Classification System  
-
-Un système de **localisation, comptage et catégorisation de véhicules** développé avec [Nom de ton ami·e] et moi.  
-Ce projet utilise **[ajoute ici : Python, OpenCV, TensorFlow, PyTorch, YOLO, etc.]** pour détecter et suivre les véhicules en temps réel ou sur des vidéos enregistrées.  
+Ce projet utilise **YOLOV11** pour détecter,compter,catégoriser et suivre les véhicules en temps réel ou sur des vidéos enregistrées.  
 
 ---
 
@@ -9,8 +7,7 @@ Ce projet utilise **[ajoute ici : Python, OpenCV, TensorFlow, PyTorch, YOLO, etc
 
 - 🔍 **Détection et suivi** des véhicules dans une vidéo ou un flux caméra.  
 - 🔢 **Comptage précis** du nombre de véhicules détectés.  
-- 🏷️ **Catégorisation par type** (voiture, camion, moto, bus, etc.).  
-- 🗺️ **Localisation** et affichage des positions dans l’image/vidéo.  
+- 🏷️ **Catégorisation par type** (voiture, camion, moto, bus, etc.).    
 - ⚡ Support du **traitement en temps réel**.  
 
 ---
@@ -33,9 +30,9 @@ source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
 
 pip install -r requirements.txt
-python main.py --camera 0
+
 
 ## 🤝 Contributeurs
 
-👩‍💻 [Ton nom]
-👨‍💻 [Nom de ton ami·e]
+👩‍💻 STEVE DONFACK
+👨‍💻 TAMDJO CHRISTIAN
